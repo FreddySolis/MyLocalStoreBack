@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\InfoUser;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -64,10 +65,27 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $us = [
             'name' => $data['name'],
+            'last_name' => $data['last_name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-        ]);
+            'rol_id' => $data['rol_id'],
+        ];
+        if ($curr = User::create($us)){
+            $id = $curr->id;
+            $in_us = [
+                'user_id' => $id,
+                'birthday' => $data['birthday'],
+                'genre' => $data['genre'],
+                'phone' => $data['phone'],
+            ];
+            if($curr_in = InfoUser::create($in_us)){
+                return 'Todo cool';
+            }
+
+        }else{
+            return 'Alguo salió mal';
+        }
     }
 }
