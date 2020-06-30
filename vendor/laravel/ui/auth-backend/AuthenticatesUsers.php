@@ -33,9 +33,8 @@ trait AuthenticatesUsers
     public function login(Request $request)
     {
 
-        $request2 = new \Illuminate\Http\Request();
 
-        $request2->replace(['email' => openssl_decrypt($request->email, 'AES-256-CBC', "xxxSecretKey1xxxxxxSecretKey1xxx"), 'password' => openssl_decrypt($request->password, 'AES-256-CBC', "xxxSecretKey1xxxxxxSecretKey1xxx")]);
+        $request->replace(['email' => openssl_decrypt($request->email, 'AES-256-CBC', "xxxSecretKey1xxxxxxSecretKey1xxx"), 'password' => openssl_decrypt($request->password, 'AES-256-CBC', "xxxSecretKey1xxxxxxSecretKey1xxx")]);
 
         $this->validateLogin($request);
 
@@ -64,9 +63,9 @@ trait AuthenticatesUsers
         // If the login attempt was unsuccessful we will increment the number of attempts
         // to login and redirect the user back to the login form. Of course, when this
         // user surpasses their maximum number of attempts they will get locked out.
-        $this->incrementLoginAttempts($request2);
+        $this->incrementLoginAttempts($request);
 
-        return $this->sendFailedLoginResponse($request2);
+        return $this->sendFailedLoginResponse($request);
     }
 
     /**
