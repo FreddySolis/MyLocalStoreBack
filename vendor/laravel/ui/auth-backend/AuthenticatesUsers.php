@@ -31,6 +31,10 @@ trait AuthenticatesUsers
      */
     public function login(Request $request)
     {
+
+
+        $request->replace(['email' => openssl_decrypt($request->email, 'AES-256-CBC', "xxxSecretKey1xxxxxxSecretKey1xxx"), 'password' => openssl_decrypt($request->password, 'AES-256-CBC', "xxxSecretKey1xxxxxxSecretKey1xxx")]);
+
         $this->validateLogin($request);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
@@ -41,6 +45,17 @@ trait AuthenticatesUsers
             $this->fireLockoutEvent($request);
 
             return $this->sendLockoutResponse($request);
+<<<<<<< HEAD
+=======
+            Log::channel('single')->info('Se ha alcanzado el límite de intentos máximos que son: '.$this->maxAttempts().' por parte de: '.$request->email);
+            return response()->json([
+                'Se ha rebasado el número de intentos' => $this->maxAttempts(),
+                'Intento actual' => $this->limiter()->hit($this->throttleKey($request)),
+                'Tiempo de espera para próximo intento' => $this->decayMinutes().' minutos',
+                'Intentando accesar desde el correo' => $request->email,
+            ],429);
+            // return $this->sendLockoutResponse($request);
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         }
 
         if ($this->attemptLogin($request)) {
@@ -65,6 +80,7 @@ trait AuthenticatesUsers
      */
     protected function validateLogin(Request $request)
     {
+        
         $request->validate([
             $this->username() => 'required|string',
             'password' => 'required|string',

@@ -1,8 +1,13 @@
 <?php
+<<<<<<< HEAD
 
 namespace GuzzleHttp\Exception;
 
 use Psr\Http\Client\NetworkExceptionInterface;
+=======
+namespace GuzzleHttp\Exception;
+
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 use Psr\Http\Message\RequestInterface;
 
 /**
@@ -10,6 +15,7 @@ use Psr\Http\Message\RequestInterface;
  *
  * Note that no response is present for a ConnectException
  */
+<<<<<<< HEAD
 class ConnectException extends TransferException implements NetworkExceptionInterface
 {
     /**
@@ -52,5 +58,32 @@ class ConnectException extends TransferException implements NetworkExceptionInte
     public function getHandlerContext(): array
     {
         return $this->handlerContext;
+=======
+class ConnectException extends RequestException
+{
+    public function __construct(
+        $message,
+        RequestInterface $request,
+        \Exception $previous = null,
+        array $handlerContext = []
+    ) {
+        parent::__construct($message, $request, null, $previous, $handlerContext);
+    }
+
+    /**
+     * @return null
+     */
+    public function getResponse()
+    {
+        return null;
+    }
+
+    /**
+     * @return bool
+     */
+    public function hasResponse()
+    {
+        return false;
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     }
 }

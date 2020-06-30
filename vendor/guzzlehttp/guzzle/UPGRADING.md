@@ -1,6 +1,7 @@
 Guzzle Upgrade Guide
 ====================
 
+<<<<<<< HEAD
 6.0 to 7.0
 ----------
 
@@ -55,6 +56,12 @@ For the full diff you can check [here](https://github.com/guzzle/guzzle/compare/
 ----------
 
 Guzzle now uses [PSR-7](https://www.php-fig.org/psr/psr-7/) for HTTP messages.
+=======
+5.0 to 6.0
+----------
+
+Guzzle now uses [PSR-7](http://www.php-fig.org/psr/psr-7/) for HTTP messages.
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 Due to the fact that these messages are immutable, this prompted a refactoring
 of Guzzle to use a middleware based system rather than an event system. Any
 HTTP message interaction (e.g., `GuzzleHttp\Message\Request`) need to be
@@ -217,7 +224,11 @@ passing a `GuzzleHttp\Adapter\AdapterInterface`, you must now pass a PHP
 
 ## Removed Fluent Interfaces
 
+<<<<<<< HEAD
 [Fluent interfaces were removed](https://ocramius.github.io/blog/fluent-interfaces-are-evil/)
+=======
+[Fluent interfaces were removed](http://ocramius.github.io/blog/fluent-interfaces-are-evil)
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 from the following classes:
 
 - `GuzzleHttp\Collection`
@@ -870,7 +881,11 @@ HeaderInterface (e.g. toArray(), getAll(), etc.).
 3.3 to 3.4
 ----------
 
+<<<<<<< HEAD
 Base URLs of a client now follow the rules of https://tools.ietf.org/html/rfc3986#section-5.2.2 when merging URLs.
+=======
+Base URLs of a client now follow the rules of http://tools.ietf.org/html/rfc3986#section-5.2.2 when merging URLs.
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
 3.2 to 3.3
 ----------

@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 namespace GuzzleHttp;
 
 use Psr\Http\Message\RequestInterface;
@@ -12,6 +15,7 @@ use Psr\Http\Message\UriInterface;
  */
 final class TransferStats
 {
+<<<<<<< HEAD
     /**
      * @var RequestInterface
      */
@@ -35,6 +39,12 @@ final class TransferStats
     /**
      * @var mixed|null
      */
+=======
+    private $request;
+    private $response;
+    private $transferTime;
+    private $handlerStats;
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     private $handlerErrorData;
 
     /**
@@ -46,10 +56,17 @@ final class TransferStats
      */
     public function __construct(
         RequestInterface $request,
+<<<<<<< HEAD
         ?ResponseInterface $response = null,
         ?float $transferTime = null,
         $handlerErrorData = null,
         array $handlerStats = []
+=======
+        ResponseInterface $response = null,
+        $transferTime = null,
+        $handlerErrorData = null,
+        $handlerStats = []
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     ) {
         $this->request = $request;
         $this->response = $response;
@@ -58,23 +75,44 @@ final class TransferStats
         $this->handlerStats = $handlerStats;
     }
 
+<<<<<<< HEAD
     public function getRequest(): RequestInterface
+=======
+    /**
+     * @return RequestInterface
+     */
+    public function getRequest()
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     {
         return $this->request;
     }
 
     /**
      * Returns the response that was received (if any).
+<<<<<<< HEAD
      */
     public function getResponse(): ?ResponseInterface
+=======
+     *
+     * @return ResponseInterface|null
+     */
+    public function getResponse()
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     {
         return $this->response;
     }
 
     /**
      * Returns true if a response was received.
+<<<<<<< HEAD
      */
     public function hasResponse(): bool
+=======
+     *
+     * @return bool
+     */
+    public function hasResponse()
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     {
         return $this->response !== null;
     }
@@ -95,8 +133,15 @@ final class TransferStats
 
     /**
      * Get the effective URI the request was sent to.
+<<<<<<< HEAD
      */
     public function getEffectiveUri(): UriInterface
+=======
+     *
+     * @return UriInterface
+     */
+    public function getEffectiveUri()
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     {
         return $this->request->getUri();
     }
@@ -106,15 +151,26 @@ final class TransferStats
      *
      * @return float|null Time in seconds.
      */
+<<<<<<< HEAD
     public function getTransferTime(): ?float
+=======
+    public function getTransferTime()
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     {
         return $this->transferTime;
     }
 
     /**
      * Gets an array of all of the handler specific transfer data.
+<<<<<<< HEAD
      */
     public function getHandlerStats(): array
+=======
+     *
+     * @return array
+     */
+    public function getHandlerStats()
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     {
         return $this->handlerStats;
     }
@@ -126,7 +182,11 @@ final class TransferStats
      *
      * @return mixed|null
      */
+<<<<<<< HEAD
     public function getHandlerStat(string $stat)
+=======
+    public function getHandlerStat($stat)
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     {
         return isset($this->handlerStats[$stat])
             ? $this->handlerStats[$stat]

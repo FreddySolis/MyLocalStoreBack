@@ -6,20 +6,46 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+<<<<<<< HEAD
     'App\\Category' => $baseDir . '/app/Category.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+=======
+    'App\\Address' => $baseDir . '/app/Address.php',
+    'App\\BuyAndSell' => $baseDir . '/app/BuyAndSell.php',
+    'App\\Category' => $baseDir . '/app/Category.php',
+    'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\CoverPageOfProducts' => $baseDir . '/app/CoverPageOfProducts.php',
+    'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AddressController' => $baseDir . '/app/Http/Controllers/AddressController.php',
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
+<<<<<<< HEAD
     'App\\Http\\Controllers\\CategoryController' => $baseDir . '/app/Http/Controllers/CategoryController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\InfoUserController' => $baseDir . '/app/Http/Controllers/InfoUserController.php',
     'App\\Http\\Controllers\\RolController' => $baseDir . '/app/Http/Controllers/RolController.php',
+=======
+    'App\\Http\\Controllers\\BuyAndSellController' => $baseDir . '/app/Http/Controllers/BuyAndSellController.php',
+    'App\\Http\\Controllers\\CategoryController' => $baseDir . '/app/Http/Controllers/CategoryController.php',
+    'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
+    'App\\Http\\Controllers\\CoverPageOfProductsController' => $baseDir . '/app/Http/Controllers/CoverPageOfProductsController.php',
+    'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\ImageController' => $baseDir . '/app/Http/Controllers/ImageController.php',
+    'App\\Http\\Controllers\\InfoUserController' => $baseDir . '/app/Http/Controllers/InfoUserController.php',
+    'App\\Http\\Controllers\\ProductController' => $baseDir . '/app/Http/Controllers/ProductController.php',
+    'App\\Http\\Controllers\\ProductsInShoppingCartController' => $baseDir . '/app/Http/Controllers/ProductsInShoppingCartController.php',
+    'App\\Http\\Controllers\\ProductsInWishListController' => $baseDir . '/app/Http/Controllers/ProductsInWishListController.php',
+    'App\\Http\\Controllers\\RolController' => $baseDir . '/app/Http/Controllers/RolController.php',
+    'App\\Http\\Controllers\\ShoppingCartController' => $baseDir . '/app/Http/Controllers/ShoppingCartController.php',
+    'App\\Http\\Controllers\\WishListController' => $baseDir . '/app/Http/Controllers/WishListController.php',
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -29,15 +55,30 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+<<<<<<< HEAD
     'App\\InfoUser' => $baseDir . '/app/InfoUser.php',
     'App\\Listeners\\SuccessfulLogin' => $baseDir . '/app/Listeners/SuccessfulLogin.php',
+=======
+    'App\\Image' => $baseDir . '/app/Image.php',
+    'App\\InfoUser' => $baseDir . '/app/InfoUser.php',
+    'App\\Listeners\\SuccessfulLogin' => $baseDir . '/app/Listeners/SuccessfulLogin.php',
+    'App\\Product' => $baseDir . '/app/Product.php',
+    'App\\ProductsInShoppingCart' => $baseDir . '/app/ProductsInShoppingCart.php',
+    'App\\ProductsInWishList' => $baseDir . '/app/ProductsInWishList.php',
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Rol' => $baseDir . '/app/Rol.php',
+<<<<<<< HEAD
     'App\\User' => $baseDir . '/app/User.php',
+=======
+    'App\\ShoppingCart' => $baseDir . '/app/ShoppingCart.php',
+    'App\\User' => $baseDir . '/app/User.php',
+    'App\\WishList' => $baseDir . '/app/WishList.php',
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/CorsService.php',
     'Brick\\Math\\BigDecimal' => $vendorDir . '/brick/math/src/BigDecimal.php',
@@ -881,7 +922,10 @@ return array(
     'Fruitcake\\Cors\\HandleCors' => $vendorDir . '/fruitcake/laravel-cors/src/HandleCors.php',
     'GuzzleHttp\\Client' => $vendorDir . '/guzzlehttp/guzzle/src/Client.php',
     'GuzzleHttp\\ClientInterface' => $vendorDir . '/guzzlehttp/guzzle/src/ClientInterface.php',
+<<<<<<< HEAD
     'GuzzleHttp\\ClientTrait' => $vendorDir . '/guzzlehttp/guzzle/src/ClientTrait.php',
+=======
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     'GuzzleHttp\\Cookie\\CookieJar' => $vendorDir . '/guzzlehttp/guzzle/src/Cookie/CookieJar.php',
     'GuzzleHttp\\Cookie\\CookieJarInterface' => $vendorDir . '/guzzlehttp/guzzle/src/Cookie/CookieJarInterface.php',
     'GuzzleHttp\\Cookie\\FileCookieJar' => $vendorDir . '/guzzlehttp/guzzle/src/Cookie/FileCookieJar.php',
@@ -893,6 +937,10 @@ return array(
     'GuzzleHttp\\Exception\\GuzzleException' => $vendorDir . '/guzzlehttp/guzzle/src/Exception/GuzzleException.php',
     'GuzzleHttp\\Exception\\InvalidArgumentException' => $vendorDir . '/guzzlehttp/guzzle/src/Exception/InvalidArgumentException.php',
     'GuzzleHttp\\Exception\\RequestException' => $vendorDir . '/guzzlehttp/guzzle/src/Exception/RequestException.php',
+<<<<<<< HEAD
+=======
+    'GuzzleHttp\\Exception\\SeekException' => $vendorDir . '/guzzlehttp/guzzle/src/Exception/SeekException.php',
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     'GuzzleHttp\\Exception\\ServerException' => $vendorDir . '/guzzlehttp/guzzle/src/Exception/ServerException.php',
     'GuzzleHttp\\Exception\\TooManyRedirectsException' => $vendorDir . '/guzzlehttp/guzzle/src/Exception/TooManyRedirectsException.php',
     'GuzzleHttp\\Exception\\TransferException' => $vendorDir . '/guzzlehttp/guzzle/src/Exception/TransferException.php',
@@ -948,6 +996,10 @@ return array(
     'GuzzleHttp\\RequestOptions' => $vendorDir . '/guzzlehttp/guzzle/src/RequestOptions.php',
     'GuzzleHttp\\RetryMiddleware' => $vendorDir . '/guzzlehttp/guzzle/src/RetryMiddleware.php',
     'GuzzleHttp\\TransferStats' => $vendorDir . '/guzzlehttp/guzzle/src/TransferStats.php',
+<<<<<<< HEAD
+=======
+    'GuzzleHttp\\UriTemplate' => $vendorDir . '/guzzlehttp/guzzle/src/UriTemplate.php',
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     'GuzzleHttp\\Utils' => $vendorDir . '/guzzlehttp/guzzle/src/Utils.php',
     'Hamcrest\\Arrays\\IsArray' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
     'Hamcrest\\Arrays\\IsArrayContaining' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
@@ -3190,10 +3242,13 @@ return array(
     'Psr\\EventDispatcher\\EventDispatcherInterface' => $vendorDir . '/psr/event-dispatcher/src/EventDispatcherInterface.php',
     'Psr\\EventDispatcher\\ListenerProviderInterface' => $vendorDir . '/psr/event-dispatcher/src/ListenerProviderInterface.php',
     'Psr\\EventDispatcher\\StoppableEventInterface' => $vendorDir . '/psr/event-dispatcher/src/StoppableEventInterface.php',
+<<<<<<< HEAD
     'Psr\\Http\\Client\\ClientExceptionInterface' => $vendorDir . '/psr/http-client/src/ClientExceptionInterface.php',
     'Psr\\Http\\Client\\ClientInterface' => $vendorDir . '/psr/http-client/src/ClientInterface.php',
     'Psr\\Http\\Client\\NetworkExceptionInterface' => $vendorDir . '/psr/http-client/src/NetworkExceptionInterface.php',
     'Psr\\Http\\Client\\RequestExceptionInterface' => $vendorDir . '/psr/http-client/src/RequestExceptionInterface.php',
+=======
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     'Psr\\Http\\Message\\MessageInterface' => $vendorDir . '/psr/http-message/src/MessageInterface.php',
     'Psr\\Http\\Message\\RequestInterface' => $vendorDir . '/psr/http-message/src/RequestInterface.php',
     'Psr\\Http\\Message\\ResponseInterface' => $vendorDir . '/psr/http-message/src/ResponseInterface.php',

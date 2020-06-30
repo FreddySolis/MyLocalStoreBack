@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 namespace GuzzleHttp;
 
 use Psr\Http\Message\MessageInterface;
@@ -37,6 +40,7 @@ class MessageFormatter
 {
     /**
      * Apache Common Log Format.
+<<<<<<< HEAD
      *
      * @link https://httpd.apache.org/docs/2.4/logs.html#common
      *
@@ -49,12 +53,26 @@ class MessageFormatter
     /**
      * @var string Template used to format log messages
      */
+=======
+     * @link http://httpd.apache.org/docs/2.4/logs.html#common
+     * @var string
+     */
+    const CLF = "{hostname} {req_header_User-Agent} - [{date_common_log}] \"{method} {target} HTTP/{version}\" {code} {res_header_Content-Length}";
+    const DEBUG = ">>>>>>>>\n{request}\n<<<<<<<<\n{response}\n--------\n{error}";
+    const SHORT = '[{ts}] "{method} {target} HTTP/{version}" {code}';
+
+    /** @var string Template used to format log messages */
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     private $template;
 
     /**
      * @param string $template Log message template
      */
+<<<<<<< HEAD
     public function __construct(?string $template = self::CLF)
+=======
+    public function __construct($template = self::CLF)
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     {
         $this->template = $template ?: self::CLF;
     }
@@ -62,6 +80,7 @@ class MessageFormatter
     /**
      * Returns a formatted message string.
      *
+<<<<<<< HEAD
      * @param RequestInterface       $request  Request that was sent
      * @param ResponseInterface|null $response Response that was received
      * @param \Throwable|null        $error    Exception that was received
@@ -75,6 +94,22 @@ class MessageFormatter
 
         /** @var string */
         return \preg_replace_callback(
+=======
+     * @param RequestInterface  $request  Request that was sent
+     * @param ResponseInterface $response Response that was received
+     * @param \Exception        $error    Exception that was received
+     *
+     * @return string
+     */
+    public function format(
+        RequestInterface $request,
+        ResponseInterface $response = null,
+        \Exception $error = null
+    ) {
+        $cache = [];
+
+        return preg_replace_callback(
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
             '/{\s*([A-Za-z_\-\.0-9]+)\s*}/',
             function (array $matches) use ($request, $response, $error, &$cache) {
                 if (isset($cache[$matches[1]])) {
@@ -90,14 +125,22 @@ class MessageFormatter
                         $result = $response ? Psr7\str($response) : '';
                         break;
                     case 'req_headers':
+<<<<<<< HEAD
                         $result = \trim($request->getMethod()
+=======
+                        $result = trim($request->getMethod()
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
                                 . ' ' . $request->getRequestTarget())
                             . ' HTTP/' . $request->getProtocolVersion() . "\r\n"
                             . $this->headers($request);
                         break;
                     case 'res_headers':
                         $result = $response ?
+<<<<<<< HEAD
                             \sprintf(
+=======
+                            sprintf(
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
                                 'HTTP/%s %d %s',
                                 $response->getProtocolVersion(),
                                 $response->getStatusCode(),
@@ -113,10 +156,17 @@ class MessageFormatter
                         break;
                     case 'ts':
                     case 'date_iso_8601':
+<<<<<<< HEAD
                         $result = \gmdate('c');
                         break;
                     case 'date_common_log':
                         $result = \date('d/M/Y:H:i:s O');
+=======
+                        $result = gmdate('c');
+                        break;
+                    case 'date_common_log':
+                        $result = date('d/M/Y:H:i:s O');
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
                         break;
                     case 'method':
                         $result = $request->getMethod();
@@ -143,7 +193,11 @@ class MessageFormatter
                         $result = $request->getHeaderLine('Host');
                         break;
                     case 'hostname':
+<<<<<<< HEAD
                         $result = \gethostname();
+=======
+                        $result = gethostname();
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
                         break;
                     case 'code':
                         $result = $response ? $response->getStatusCode() : 'NULL';
@@ -156,11 +210,19 @@ class MessageFormatter
                         break;
                     default:
                         // handle prefixed dynamic headers
+<<<<<<< HEAD
                         if (\strpos($matches[1], 'req_header_') === 0) {
                             $result = $request->getHeaderLine(\substr($matches[1], 11));
                         } elseif (\strpos($matches[1], 'res_header_') === 0) {
                             $result = $response
                                 ? $response->getHeaderLine(\substr($matches[1], 11))
+=======
+                        if (strpos($matches[1], 'req_header_') === 0) {
+                            $result = $request->getHeaderLine(substr($matches[1], 11));
+                        } elseif (strpos($matches[1], 'res_header_') === 0) {
+                            $result = $response
+                                ? $response->getHeaderLine(substr($matches[1], 11))
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
                                 : 'NULL';
                         }
                 }
@@ -174,6 +236,7 @@ class MessageFormatter
 
     /**
      * Get headers from message as string
+<<<<<<< HEAD
      */
     private function headers(MessageInterface $message): string
     {
@@ -183,5 +246,18 @@ class MessageFormatter
         }
 
         return \trim($result);
+=======
+     *
+     * @return string
+     */
+    private function headers(MessageInterface $message)
+    {
+        $result = '';
+        foreach ($message->getHeaders() as $name => $values) {
+            $result .= $name . ': ' . implode(', ', $values) . "\r\n";
+        }
+
+        return trim($result);
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     }
 }

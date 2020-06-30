@@ -1,5 +1,6 @@
 # Change Log
 
+<<<<<<< HEAD
 Please refer to [UPGRADING](UPGRADING.md) guide for upgrading to a major version.
 
 ## UNRELEASED
@@ -76,6 +77,20 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * `CookieJar::getCookieValue()` [#2433](https://github.com/guzzle/guzzle/pull/2433)
 * `uri_template()` and `UriTemplate` [#2440](https://github.com/guzzle/guzzle/pull/2440)
 * Request options `save_to` and `exceptions` [#2464](https://github.com/guzzle/guzzle/pull/2464)
+=======
+## 6.5.5 - 2020-06-16
+
+* Unpin version constraint for `symfony/polyfill-intl-idn` [#2678](https://github.com/guzzle/guzzle/pull/2678)
+
+## 6.5.4 - 2020-05-25
+
+* Fix various intl icu issues [#2626](https://github.com/guzzle/guzzle/pull/2626)
+
+## 6.5.3 - 2020-04-18
+
+* Use Symfony intl-idn polyfill [#2550](https://github.com/guzzle/guzzle/pull/2550)
+* Remove use of internal functions [#2548](https://github.com/guzzle/guzzle/pull/2548)
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
 ## 6.5.2 - 2019-12-23
 
@@ -91,13 +106,24 @@ Please see [the upgrade document](UPGRADING.md) that describes all BC breaking c
 * Improvement: Added support for reset internal queue in MockHandler. [#2143](https://github.com/guzzle/guzzle/pull/2143)
 * Improvement: Added support to pass arbitrary options to `curl_multi_init`. [#2287](https://github.com/guzzle/guzzle/pull/2287)
 * Fix: Gracefully handle passing `null` to the `header` option. [#2132](https://github.com/guzzle/guzzle/pull/2132)
+<<<<<<< HEAD
 * Fix: `RetryMiddleware` did not do exponential delay between retires due unit mismatch. [#2132](https://github.com/guzzle/guzzle/pull/2132)
+=======
+* Fix: `RetryMiddleware` did not do exponential delay between retries due unit mismatch. [#2132](https://github.com/guzzle/guzzle/pull/2132)
+  Previously, `RetryMiddleware` would sleep for 1 millisecond, then 2 milliseconds, then 4 milliseconds.
+  **After this change, `RetryMiddleware` will sleep for 1 second, then 2 seconds, then 4 seconds.**
+  `Middleware::retry()` accepts a second callback parameter to override the default timeouts if needed.
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 * Fix: Prevent undefined offset when using array for ssl_key options. [#2348](https://github.com/guzzle/guzzle/pull/2348)
 * Deprecated `ClientInterface::VERSION`
 
 ## 6.4.1 - 2019-10-23
 
+<<<<<<< HEAD
 * No `guzzle.phar` was created in 6.4.0 due expired API token. This release will fix that
+=======
+* No `guzzle.phar` was created in 6.4.0 due expired API token. This release will fix that 
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 * Added `parent::__construct()` to `FileCookieJar` and `SessionCookieJar`
 
 ## 6.4.0 - 2019-10-23
@@ -419,7 +445,11 @@ object).
   * Note: This has been changed in 5.0.3 to now encode query string values by
     default unless the `rawString` argument is provided when setting the query
     string on a URL: Now allowing many more characters to be present in the
+<<<<<<< HEAD
     query string without being percent encoded. See https://tools.ietf.org/html/rfc3986#appendix-A
+=======
+    query string without being percent encoded. See http://tools.ietf.org/html/rfc3986#appendix-A
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
 ## 5.0.1 - 2014-10-16
 
@@ -461,7 +491,11 @@ interfaces.
   responses, `GuzzleHttp\Collection`, `GuzzleHttp\Url`,
   `GuzzleHttp\Query`, `GuzzleHttp\Post\PostBody`, and
   `GuzzleHttp\Cookie\SetCookie`. This blog post provides a good outline of
+<<<<<<< HEAD
   why I did this: https://ocramius.github.io/blog/fluent-interfaces-are-evil/.
+=======
+  why I did this: http://ocramius.github.io/blog/fluent-interfaces-are-evil/.
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
   This also makes the Guzzle message interfaces compatible with the current
   PSR-7 message proposal.
 * Removed "functions.php", so that Guzzle is truly PSR-4 compliant. Except
@@ -647,6 +681,11 @@ interfaces.
 
 ## 4.0.0 - 2014-03-29
 
+<<<<<<< HEAD
+=======
+* For more information on the 4.0 transition, see:
+  http://mtdowling.com/blog/2014/03/15/guzzle-4-rc/
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 * For information on changes and upgrading, see:
   https://github.com/guzzle/guzzle/blob/master/UPGRADING.md#3x-to-40
 * Added `GuzzleHttp\batch()` as a convenience function for sending requests in
@@ -955,7 +994,11 @@ interfaces.
 
 ## 3.4.0 - 2013-04-11
 
+<<<<<<< HEAD
 * Bug fix: URLs are now resolved correctly based on https://tools.ietf.org/html/rfc3986#section-5.2. #289
+=======
+* Bug fix: URLs are now resolved correctly based on http://tools.ietf.org/html/rfc3986#section-5.2. #289
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 * Bug fix: Absolute URLs with a path in a service description will now properly override the base URL. #289
 * Bug fix: Parsing a query string with a single PHP array value will now result in an array. #263
 * Bug fix: Better normalization of the User-Agent header to prevent duplicate headers. #264.

@@ -9,9 +9,13 @@
         "web service",
         "curl",
         "client",
+<<<<<<< HEAD
         "HTTP client",
         "PSR-7",
         "PSR-18"
+=======
+        "HTTP client"
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     ],
     "homepage": "http://guzzlephp.org/",
     "license": "MIT",
@@ -20,6 +24,7 @@
             "name": "Michael Dowling",
             "email": "mtdowling@gmail.com",
             "homepage": "https://github.com/mtdowling"
+<<<<<<< HEAD
         },
         {
             "name": "Márk Sági-Kazár",
@@ -47,6 +52,23 @@
     "suggest": {
         "ext-curl": "Required for CURL handler support",
         "ext-intl": "Required for Internationalized Domain Name (IDN) support",
+=======
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "ext-json": "*",
+        "symfony/polyfill-intl-idn": "^1.17.0",
+        "guzzlehttp/promises": "^1.0",
+        "guzzlehttp/psr7": "^1.6.1"
+    },
+    "require-dev": {
+        "ext-curl": "*",
+        "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
+        "psr/log": "^1.1"
+    },
+    "suggest": {
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         "psr/log": "Required for using the Log middleware"
     },
     "config": {
@@ -54,7 +76,11 @@
     },
     "extra": {
         "branch-alias": {
+<<<<<<< HEAD
             "dev-master": "7.0-dev"
+=======
+            "dev-master": "6.5-dev"
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         }
     },
     "autoload": {

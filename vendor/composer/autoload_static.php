@@ -4,7 +4,11 @@
 
 namespace Composer\Autoload;
 
+<<<<<<< HEAD
 class ComposerStaticInite44864adaa81c68b92d88afb964a5d4d
+=======
+class ComposerStaticInitdf8817aa062167d394c358c35fb65fe1
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -97,7 +101,10 @@ class ComposerStaticInite44864adaa81c68b92d88afb964a5d4d
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+<<<<<<< HEAD
             'Psr\\Http\\Client\\' => 16,
+=======
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
             'Prophecy\\' => 9,
@@ -326,10 +333,13 @@ class ComposerStaticInite44864adaa81c68b92d88afb964a5d4d
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
+<<<<<<< HEAD
         'Psr\\Http\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-client/src',
         ),
+=======
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         'Psr\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/event-dispatcher/src',
@@ -490,20 +500,46 @@ class ComposerStaticInite44864adaa81c68b92d88afb964a5d4d
     );
 
     public static $classMap = array (
+<<<<<<< HEAD
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+=======
+        'App\\Address' => __DIR__ . '/../..' . '/app/Address.php',
+        'App\\BuyAndSell' => __DIR__ . '/../..' . '/app/BuyAndSell.php',
+        'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
+        'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\CoverPageOfProducts' => __DIR__ . '/../..' . '/app/CoverPageOfProducts.php',
+        'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AddressController' => __DIR__ . '/../..' . '/app/Http/Controllers/AddressController.php',
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+<<<<<<< HEAD
         'App\\Http\\Controllers\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoryController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\InfoUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/InfoUserController.php',
         'App\\Http\\Controllers\\RolController' => __DIR__ . '/../..' . '/app/Http/Controllers/RolController.php',
+=======
+        'App\\Http\\Controllers\\BuyAndSellController' => __DIR__ . '/../..' . '/app/Http/Controllers/BuyAndSellController.php',
+        'App\\Http\\Controllers\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoryController.php',
+        'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\CoverPageOfProductsController' => __DIR__ . '/../..' . '/app/Http/Controllers/CoverPageOfProductsController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\ImageController' => __DIR__ . '/../..' . '/app/Http/Controllers/ImageController.php',
+        'App\\Http\\Controllers\\InfoUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/InfoUserController.php',
+        'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
+        'App\\Http\\Controllers\\ProductsInShoppingCartController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductsInShoppingCartController.php',
+        'App\\Http\\Controllers\\ProductsInWishListController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductsInWishListController.php',
+        'App\\Http\\Controllers\\RolController' => __DIR__ . '/../..' . '/app/Http/Controllers/RolController.php',
+        'App\\Http\\Controllers\\ShoppingCartController' => __DIR__ . '/../..' . '/app/Http/Controllers/ShoppingCartController.php',
+        'App\\Http\\Controllers\\WishListController' => __DIR__ . '/../..' . '/app/Http/Controllers/WishListController.php',
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -513,15 +549,30 @@ class ComposerStaticInite44864adaa81c68b92d88afb964a5d4d
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+<<<<<<< HEAD
         'App\\InfoUser' => __DIR__ . '/../..' . '/app/InfoUser.php',
         'App\\Listeners\\SuccessfulLogin' => __DIR__ . '/../..' . '/app/Listeners/SuccessfulLogin.php',
+=======
+        'App\\Image' => __DIR__ . '/../..' . '/app/Image.php',
+        'App\\InfoUser' => __DIR__ . '/../..' . '/app/InfoUser.php',
+        'App\\Listeners\\SuccessfulLogin' => __DIR__ . '/../..' . '/app/Listeners/SuccessfulLogin.php',
+        'App\\Product' => __DIR__ . '/../..' . '/app/Product.php',
+        'App\\ProductsInShoppingCart' => __DIR__ . '/../..' . '/app/ProductsInShoppingCart.php',
+        'App\\ProductsInWishList' => __DIR__ . '/../..' . '/app/ProductsInWishList.php',
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Rol' => __DIR__ . '/../..' . '/app/Rol.php',
+<<<<<<< HEAD
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+=======
+        'App\\ShoppingCart' => __DIR__ . '/../..' . '/app/ShoppingCart.php',
+        'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\WishList' => __DIR__ . '/../..' . '/app/WishList.php',
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
@@ -1365,7 +1416,10 @@ class ComposerStaticInite44864adaa81c68b92d88afb964a5d4d
         'Fruitcake\\Cors\\HandleCors' => __DIR__ . '/..' . '/fruitcake/laravel-cors/src/HandleCors.php',
         'GuzzleHttp\\Client' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Client.php',
         'GuzzleHttp\\ClientInterface' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/ClientInterface.php',
+<<<<<<< HEAD
         'GuzzleHttp\\ClientTrait' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/ClientTrait.php',
+=======
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         'GuzzleHttp\\Cookie\\CookieJar' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Cookie/CookieJar.php',
         'GuzzleHttp\\Cookie\\CookieJarInterface' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Cookie/CookieJarInterface.php',
         'GuzzleHttp\\Cookie\\FileCookieJar' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Cookie/FileCookieJar.php',
@@ -1377,6 +1431,10 @@ class ComposerStaticInite44864adaa81c68b92d88afb964a5d4d
         'GuzzleHttp\\Exception\\GuzzleException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/GuzzleException.php',
         'GuzzleHttp\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/InvalidArgumentException.php',
         'GuzzleHttp\\Exception\\RequestException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/RequestException.php',
+<<<<<<< HEAD
+=======
+        'GuzzleHttp\\Exception\\SeekException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/SeekException.php',
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         'GuzzleHttp\\Exception\\ServerException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/ServerException.php',
         'GuzzleHttp\\Exception\\TooManyRedirectsException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/TooManyRedirectsException.php',
         'GuzzleHttp\\Exception\\TransferException' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Exception/TransferException.php',
@@ -1432,6 +1490,10 @@ class ComposerStaticInite44864adaa81c68b92d88afb964a5d4d
         'GuzzleHttp\\RequestOptions' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/RequestOptions.php',
         'GuzzleHttp\\RetryMiddleware' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/RetryMiddleware.php',
         'GuzzleHttp\\TransferStats' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/TransferStats.php',
+<<<<<<< HEAD
+=======
+        'GuzzleHttp\\UriTemplate' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/UriTemplate.php',
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         'GuzzleHttp\\Utils' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Utils.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
@@ -3674,10 +3736,13 @@ class ComposerStaticInite44864adaa81c68b92d88afb964a5d4d
         'Psr\\EventDispatcher\\EventDispatcherInterface' => __DIR__ . '/..' . '/psr/event-dispatcher/src/EventDispatcherInterface.php',
         'Psr\\EventDispatcher\\ListenerProviderInterface' => __DIR__ . '/..' . '/psr/event-dispatcher/src/ListenerProviderInterface.php',
         'Psr\\EventDispatcher\\StoppableEventInterface' => __DIR__ . '/..' . '/psr/event-dispatcher/src/StoppableEventInterface.php',
+<<<<<<< HEAD
         'Psr\\Http\\Client\\ClientExceptionInterface' => __DIR__ . '/..' . '/psr/http-client/src/ClientExceptionInterface.php',
         'Psr\\Http\\Client\\ClientInterface' => __DIR__ . '/..' . '/psr/http-client/src/ClientInterface.php',
         'Psr\\Http\\Client\\NetworkExceptionInterface' => __DIR__ . '/..' . '/psr/http-client/src/NetworkExceptionInterface.php',
         'Psr\\Http\\Client\\RequestExceptionInterface' => __DIR__ . '/..' . '/psr/http-client/src/RequestExceptionInterface.php',
+=======
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         'Psr\\Http\\Message\\MessageInterface' => __DIR__ . '/..' . '/psr/http-message/src/MessageInterface.php',
         'Psr\\Http\\Message\\RequestInterface' => __DIR__ . '/..' . '/psr/http-message/src/RequestInterface.php',
         'Psr\\Http\\Message\\ResponseInterface' => __DIR__ . '/..' . '/psr/http-message/src/ResponseInterface.php',
@@ -4913,10 +4978,17 @@ class ComposerStaticInite44864adaa81c68b92d88afb964a5d4d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+<<<<<<< HEAD
             $loader->prefixLengthsPsr4 = ComposerStaticInite44864adaa81c68b92d88afb964a5d4d::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInite44864adaa81c68b92d88afb964a5d4d::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInite44864adaa81c68b92d88afb964a5d4d::$prefixesPsr0;
             $loader->classMap = ComposerStaticInite44864adaa81c68b92d88afb964a5d4d::$classMap;
+=======
+            $loader->prefixLengthsPsr4 = ComposerStaticInitdf8817aa062167d394c358c35fb65fe1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitdf8817aa062167d394c358c35fb65fe1::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitdf8817aa062167d394c358c35fb65fe1::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitdf8817aa062167d394c358c35fb65fe1::$classMap;
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
         }, null, ClassLoader::class);
     }

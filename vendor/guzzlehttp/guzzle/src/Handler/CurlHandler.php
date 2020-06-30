@@ -1,8 +1,14 @@
 <?php
+<<<<<<< HEAD
 
 namespace GuzzleHttp\Handler;
 
 use GuzzleHttp\Promise\PromiseInterface;
+=======
+namespace GuzzleHttp\Handler;
+
+use GuzzleHttp\Psr7;
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 use Psr\Http\Message\RequestInterface;
 
 /**
@@ -14,9 +20,13 @@ use Psr\Http\Message\RequestInterface;
  */
 class CurlHandler
 {
+<<<<<<< HEAD
     /**
      * @var CurlFactoryInterface
      */
+=======
+    /** @var CurlFactoryInterface */
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     private $factory;
 
     /**
@@ -28,6 +38,7 @@ class CurlHandler
      */
     public function __construct(array $options = [])
     {
+<<<<<<< HEAD
         $this->factory = $options['handle_factory']
             ?? new CurlFactory(3);
     }
@@ -41,6 +52,22 @@ class CurlHandler
         $easy = $this->factory->create($request, $options);
         \curl_exec($easy->handle);
         $easy->errno = \curl_errno($easy->handle);
+=======
+        $this->factory = isset($options['handle_factory'])
+            ? $options['handle_factory']
+            : new CurlFactory(3);
+    }
+
+    public function __invoke(RequestInterface $request, array $options)
+    {
+        if (isset($options['delay'])) {
+            usleep($options['delay'] * 1000);
+        }
+
+        $easy = $this->factory->create($request, $options);
+        curl_exec($easy->handle);
+        $easy->errno = curl_errno($easy->handle);
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
         return CurlFactory::finish($this, $easy, $this->factory);
     }

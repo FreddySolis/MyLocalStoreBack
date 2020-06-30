@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 namespace GuzzleHttp;
 
 /**
@@ -32,7 +35,11 @@ final class RequestOptions
      *   response that was received, and the effective URI. Any return value
      *   from the on_redirect function is ignored.
      */
+<<<<<<< HEAD
     public const ALLOW_REDIRECTS = 'allow_redirects';
+=======
+    const ALLOW_REDIRECTS = 'allow_redirects';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * auth: (array) Pass an array of HTTP authentication parameters to use
@@ -41,13 +48,21 @@ final class RequestOptions
      * authentication type in index [2]. Pass null to disable authentication
      * for a request.
      */
+<<<<<<< HEAD
     public const AUTH = 'auth';
+=======
+    const AUTH = 'auth';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * body: (resource|string|null|int|float|StreamInterface|callable|\Iterator)
      * Body to send in the request.
      */
+<<<<<<< HEAD
     public const BODY = 'body';
+=======
+    const BODY = 'body';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * cert: (string|array) Set to a string to specify the path to a file
@@ -56,42 +71,68 @@ final class RequestOptions
      * file in the first array element followed by the certificate password
      * in the second array element.
      */
+<<<<<<< HEAD
     public const CERT = 'cert';
+=======
+    const CERT = 'cert';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * cookies: (bool|GuzzleHttp\Cookie\CookieJarInterface, default=false)
      * Specifies whether or not cookies are used in a request or what cookie
      * jar to use or what cookies to send. This option only works if your
      * handler has the `cookie` middleware. Valid values are `false` and
+<<<<<<< HEAD
      * an instance of {@see \GuzzleHttp\Cookie\CookieJarInterface}.
      */
     public const COOKIES = 'cookies';
+=======
+     * an instance of {@see GuzzleHttp\Cookie\CookieJarInterface}.
+     */
+    const COOKIES = 'cookies';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * connect_timeout: (float, default=0) Float describing the number of
      * seconds to wait while trying to connect to a server. Use 0 to wait
      * indefinitely (the default behavior).
      */
+<<<<<<< HEAD
     public const CONNECT_TIMEOUT = 'connect_timeout';
+=======
+    const CONNECT_TIMEOUT = 'connect_timeout';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * debug: (bool|resource) Set to true or set to a PHP stream returned by
      * fopen()  enable debug output with the HTTP handler used to send a
      * request.
      */
+<<<<<<< HEAD
     public const DEBUG = 'debug';
+=======
+    const DEBUG = 'debug';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * decode_content: (bool, default=true) Specify whether or not
      * Content-Encoding responses (gzip, deflate, etc.) are automatically
      * decoded.
      */
+<<<<<<< HEAD
     public const DECODE_CONTENT = 'decode_content';
+=======
+    const DECODE_CONTENT = 'decode_content';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * delay: (int) The amount of time to delay before sending in milliseconds.
      */
+<<<<<<< HEAD
     public const DELAY = 'delay';
+=======
+    const DELAY = 'delay';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * expect: (bool|integer) Controls the behavior of the
@@ -109,7 +150,11 @@ final class RequestOptions
      * size of the body of a request is greater than 1 MB and a request is
      * using HTTP/1.1.
      */
+<<<<<<< HEAD
     public const EXPECT = 'expect';
+=======
+    const EXPECT = 'expect';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * form_params: (array) Associative array of form field names to values
@@ -117,13 +162,21 @@ final class RequestOptions
      * header to application/x-www-form-urlencoded when no Content-Type header
      * is already present.
      */
+<<<<<<< HEAD
     public const FORM_PARAMS = 'form_params';
+=======
+    const FORM_PARAMS = 'form_params';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * headers: (array) Associative array of HTTP headers. Each value MUST be
      * a string or array of strings.
      */
+<<<<<<< HEAD
     public const HEADERS = 'headers';
+=======
+    const HEADERS = 'headers';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * http_errors: (bool, default=true) Set to false to disable exceptions
@@ -131,7 +184,11 @@ final class RequestOptions
      * exceptions will be thrown for 4xx and 5xx responses. This option only
      * works if your handler has the `httpErrors` middleware.
      */
+<<<<<<< HEAD
     public const HTTP_ERRORS = 'http_errors';
+=======
+    const HTTP_ERRORS = 'http_errors';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * idn: (bool|int, default=true) A combination of IDNA_* constants for
@@ -139,14 +196,22 @@ final class RequestOptions
      * disable IDN support completely, or to true to use the default
      * configuration (IDNA_DEFAULT constant).
      */
+<<<<<<< HEAD
     public const IDN_CONVERSION = 'idn_conversion';
+=======
+    const IDN_CONVERSION = 'idn_conversion';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * json: (mixed) Adds JSON data to a request. The provided value is JSON
      * encoded and a Content-Type header of application/json will be added to
      * the request if no Content-Type header is already present.
      */
+<<<<<<< HEAD
     public const JSON = 'json';
+=======
+    const JSON = 'json';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * multipart: (array) Array of associative arrays, each containing a
@@ -157,14 +222,22 @@ final class RequestOptions
      * the part. If no "filename" key is present, then no "filename" attribute
      * will be added to the part.
      */
+<<<<<<< HEAD
     public const MULTIPART = 'multipart';
+=======
+    const MULTIPART = 'multipart';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * on_headers: (callable) A callable that is invoked when the HTTP headers
      * of the response have been received but the body has not yet begun to
      * download.
      */
+<<<<<<< HEAD
     public const ON_HEADERS = 'on_headers';
+=======
+    const ON_HEADERS = 'on_headers';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * on_stats: (callable) allows you to get access to transfer statistics of
@@ -175,7 +248,11 @@ final class RequestOptions
      * the error encountered. Included in the data is the total amount of time
      * taken to send the request.
      */
+<<<<<<< HEAD
     public const ON_STATS = 'on_stats';
+=======
+    const ON_STATS = 'on_stats';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * progress: (callable) Defines a function to invoke when transfer
@@ -184,14 +261,22 @@ final class RequestOptions
      * number of bytes downloaded so far, the number of bytes expected to be
      * uploaded, the number of bytes uploaded so far.
      */
+<<<<<<< HEAD
     public const PROGRESS = 'progress';
+=======
+    const PROGRESS = 'progress';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * proxy: (string|array) Pass a string to specify an HTTP proxy, or an
      * array to specify different proxies for different protocols (where the
      * key is the protocol and the value is a proxy string).
      */
+<<<<<<< HEAD
     public const PROXY = 'proxy';
+=======
+    const PROXY = 'proxy';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * query: (array|string) Associative array of query string values to add
@@ -199,14 +284,22 @@ final class RequestOptions
      * the string representation. Pass a string value if you need more
      * control than what this method provides
      */
+<<<<<<< HEAD
     public const QUERY = 'query';
+=======
+    const QUERY = 'query';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * sink: (resource|string|StreamInterface) Where the data of the
      * response is written to. Defaults to a PHP temp stream. Providing a
      * string will write data to a file by the given name.
      */
+<<<<<<< HEAD
     public const SINK = 'sink';
+=======
+    const SINK = 'sink';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * synchronous: (bool) Set to true to inform HTTP handlers that you intend
@@ -214,7 +307,11 @@ final class RequestOptions
      * that a promise is still returned if you are using one of the async
      * client methods.
      */
+<<<<<<< HEAD
     public const SYNCHRONOUS = 'synchronous';
+=======
+    const SYNCHRONOUS = 'synchronous';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * ssl_key: (array|string) Specify the path to a file containing a private
@@ -222,13 +319,21 @@ final class RequestOptions
      * containing the path to the SSL key in the first array element followed
      * by the password required for the certificate in the second element.
      */
+<<<<<<< HEAD
     public const SSL_KEY = 'ssl_key';
+=======
+    const SSL_KEY = 'ssl_key';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * stream: Set to true to attempt to stream a response rather than
      * download it all up-front.
      */
+<<<<<<< HEAD
     public const STREAM = 'stream';
+=======
+    const STREAM = 'stream';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * verify: (bool|string, default=true) Describes the SSL certificate
@@ -238,27 +343,47 @@ final class RequestOptions
      * is insecure!). Set to a string to provide the path to a CA bundle on
      * disk to enable verification using a custom certificate.
      */
+<<<<<<< HEAD
     public const VERIFY = 'verify';
+=======
+    const VERIFY = 'verify';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * timeout: (float, default=0) Float describing the timeout of the
      * request in seconds. Use 0 to wait indefinitely (the default behavior).
      */
+<<<<<<< HEAD
     public const TIMEOUT = 'timeout';
+=======
+    const TIMEOUT = 'timeout';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * read_timeout: (float, default=default_socket_timeout ini setting) Float describing
      * the body read timeout, for stream requests.
      */
+<<<<<<< HEAD
     public const READ_TIMEOUT = 'read_timeout';
+=======
+    const READ_TIMEOUT = 'read_timeout';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * version: (float) Specifies the HTTP protocol version to attempt to use.
      */
+<<<<<<< HEAD
     public const VERSION = 'version';
+=======
+    const VERSION = 'version';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 
     /**
      * force_ip_resolve: (bool) Force client to use only ipv4 or ipv6 protocol
      */
+<<<<<<< HEAD
     public const FORCE_IP_RESOLVE = 'force_ip_resolve';
+=======
+    const FORCE_IP_RESOLVE = 'force_ip_resolve';
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
 }

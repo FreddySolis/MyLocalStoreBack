@@ -44,7 +44,10 @@ return array(
     'Psr\\SimpleCache\\' => array($vendorDir . '/psr/simple-cache/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
+<<<<<<< HEAD
     'Psr\\Http\\Client\\' => array($vendorDir . '/psr/http-client/src'),
+=======
+>>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
     'Psr\\EventDispatcher\\' => array($vendorDir . '/psr/event-dispatcher/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src/Prophecy'),
