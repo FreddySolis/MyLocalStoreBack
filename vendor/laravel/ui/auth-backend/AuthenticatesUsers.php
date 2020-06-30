@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Log;
 
 trait AuthenticatesUsers
 {
@@ -38,7 +39,8 @@ trait AuthenticatesUsers
         if (method_exists($this, 'hasTooManyLoginAttempts') &&
             $this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
-            
+
+            Log::channel('single')->info('Se ha alcanzado el límite de intentos máximos que son: '.$this->maxAttempts().' por parte de: '.$request->email);
             return response()->json([
                 'Se ha rebasado el número de intentos' => $this->maxAttempts(),
                 'Intento actual' => $this->limiter()->hit($this->throttleKey($request)),
@@ -111,6 +113,7 @@ trait AuthenticatesUsers
         $request->session()->regenerate();
 
         $this->clearLoginAttempts($request);
+        Log::channel('single')->info('Ha iniciado sesión con éxito '.$request->email);
 
         if ($response = $this->authenticated($request, $this->guard()->user())) {
             return $response;
