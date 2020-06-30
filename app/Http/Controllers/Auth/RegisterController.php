@@ -81,7 +81,19 @@ class RegisterController extends Controller
                 'phone' => $data['phone'],
             ];
             if($curr_in = InfoUser::create($in_us)){
-                return 'Todo cool';
+                $WL = [
+                    'user_id'=> $id
+                ];
+                if(WishList::create($WL)){
+                    $SC = [
+                        'user_id'=> $id,
+                        'status'=> true
+                    ];
+                    if(ShoppingCart::create($SC)){
+                        return 200;
+                    }
+                }
+                
             }
 
         }else{
