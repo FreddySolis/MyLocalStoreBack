@@ -29,12 +29,9 @@ trait RegistersUsers
      */
     public function register(Request $request)
     {
-<<<<<<< HEAD
-=======
         $Key = "xxxSecretKey1xxxxxxSecretKey1xxx";
         $encrypt = 'AES-256-CBC';
         $request->replace(['email' => openssl_decrypt($request->email, $encrypt, $key), 'password' => openssl_decrypt($request->password,  $encrypt, $key), "password_confirmation" => openssl_decrypt($request->password_confirmation,  $encrypt, $key), "last_name" => openssl_decrypt($request->last_name,  $encrypt, $key), "phone"=>openssl_decrypt($request->phone,  $encrypt, $key), "name"=>openssl_decrypt($request->name,  $encrypt, $key)]);
->>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         $this->validator($request->all())->validate();
 
         event(new Registered($user = $this->create($request->all())));

@@ -45,8 +45,6 @@ trait AuthenticatesUsers
             $this->fireLockoutEvent($request);
 
             return $this->sendLockoutResponse($request);
-<<<<<<< HEAD
-=======
             Log::channel('single')->info('Se ha alcanzado el límite de intentos máximos que son: '.$this->maxAttempts().' por parte de: '.$request->email);
             return response()->json([
                 'Se ha rebasado el número de intentos' => $this->maxAttempts(),
@@ -55,7 +53,6 @@ trait AuthenticatesUsers
                 'Intentando accesar desde el correo' => $request->email,
             ],429);
             // return $this->sendLockoutResponse($request);
->>>>>>> 53677bf7ba8144810ee62f4fb8e72e6c6587dfc1
         }
 
         if ($this->attemptLogin($request)) {
