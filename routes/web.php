@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('enviar',function(){
+    Mail::send('emails',[],function($message){
+        $message->from('mystorebusiness9@gmail.com','My Store');
+        $message->to('julioxddi@gmail.com')->subject('Bienvenid@ a My Store');
+    });
+
+    // Mail::send('emails',[], function ($message) {
+    //     $message->from('mystorebusiness9@gmail.com', 'Laravel');
+    
+    //     $message->to('julioxddi@gmail.com')->cc('mystorebusiness9@gmail.com');
+    // });
+
+   // return "Enviado con exito";
+});
+
+
 Auth::routes();
 
 Route::resource('rols', 'RolController');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
