@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use Illuminate\Support\Facades\Mail;
 
 use App\Http\Controllers\Controller;
 use App\InfoUser;
@@ -65,6 +66,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $this->email = $data['email'];
+
         $us = [
             'name' => $data['name'],
             'last_name' => $data['last_name'],
@@ -72,6 +75,12 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'rol_id' => $data['rol_id'],
         ];
+
+        Mail::send('emails',[],function($msg){
+            $msg->from('mystorebusiness9@gmail.com','My Store');
+            $msg->to($this->email)->subject('Bienvenid@ a My Store');
+        });
+
         if ($curr = User::create($us)){
             $id = $curr->id;
             $in_us = [
