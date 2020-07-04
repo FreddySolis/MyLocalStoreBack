@@ -31,30 +31,6 @@ trait AuthenticatesUsers
      */
     public function login(Request $request)
     {
-        // $this->validateLogin($request);
-
-        // // If the class is using the ThrottlesLogins trait, we can automatically throttle
-        // // the login attempts for this application. We'll key this by the username and
-        // // the IP address of the client making these requests into this application.
-        // if (method_exists($this, 'hasTooManyLoginAttempts') &&
-        //     $this->hasTooManyLoginAttempts($request)) {
-        //     $this->fireLockoutEvent($request);
-
-        //     return $this->sendLockoutResponse($request);
-        // }
-
-        // if ($this->attemptLogin($request)) {
-        //     return $this->sendLoginResponse($request);
-        // }
-
-        // // If the login attempt was unsuccessful we will increment the number of attempts
-        // // to login and redirect the user back to the login form. Of course, when this
-        // // user surpasses their maximum number of attempts they will get locked out.
-        // $this->incrementLoginAttempts($request);
-
-        // return $this->sendFailedLoginResponse($request);
-        $request->replace(['email' => openssl_decrypt($request->email, 'AES-256-CBC', "xxxSecretKey1xxxxxxSecretKey1xxx"), 'password' => openssl_decrypt($request->password, 'AES-256-CBC', "xxxSecretKey1xxxxxxSecretKey1xxx")]);
-
         $this->validateLogin($request);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
@@ -65,14 +41,6 @@ trait AuthenticatesUsers
             $this->fireLockoutEvent($request);
 
             return $this->sendLockoutResponse($request);
-            Log::channel('single')->info('Se ha alcanzado el límite de intentos máximos que son: '.$this->maxAttempts().' por parte de: '.$request->email);
-            return response()->json([
-                'Se ha rebasado el número de intentos' => $this->maxAttempts(),
-                'Intento actual' => $this->limiter()->hit($this->throttleKey($request)),
-                'Tiempo de espera para próximo intento' => $this->decayMinutes().' minutos',
-                'Intentando accesar desde el correo' => $request->email,
-            ],429);
-            // return $this->sendLockoutResponse($request);
         }
 
         if ($this->attemptLogin($request)) {

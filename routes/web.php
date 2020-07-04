@@ -38,6 +38,7 @@ Route::get('enviar',function(){
 Auth::routes();
 Route::resource('products', 'ProductController');
 Route::resource('rols', 'RolController');
+Route::resource('address', 'AddressController')->middleware('auth');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
