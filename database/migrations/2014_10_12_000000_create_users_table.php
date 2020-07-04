@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->dateTime('last_login')->nullable();
             $table->unsignedBigInteger('rol_id');
-            $table->boolean('status');
+            $table->boolean('status')->default(true);
             $table->rememberToken();
             $table->timestamps();
             $table->foreign('rol_id')->references('id')->on('rols')->onDelete('cascade');
